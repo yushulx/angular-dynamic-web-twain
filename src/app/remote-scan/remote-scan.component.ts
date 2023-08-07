@@ -4,7 +4,7 @@ import Dynamsoft from 'dwt';
 import { RemoteScanObject } from 'dwt/dist/types/RemoteScan';
 import { ServiceInfo, Device } from 'dwt/dist/types/WebTwain.Acquire';
 import { DynamicWebTWAINService } from '../dynamic-web-twain.service';
-import { Location } from '@angular/common';
+import { DeviceConfiguration } from 'dwt/dist/types/WebTwain.Acquire';
 
 @Component({
   selector: 'app-remote-scan',
@@ -108,7 +108,29 @@ export class RemoteScanComponent implements OnInit {
   acquireImage(): void {
     if (!this.dwtObject)
       return;
-    this.dwtObject.acquireImage(this.devices![this.selectSources!.selectedIndex]);
+
+    let pixelType = '2';
+    var pixelTypeInputs = document.getElementsByName("PixelType");
+    for (var i = 0; i < pixelTypeInputs.length; i++) {
+      if ((<HTMLInputElement>pixelTypeInputs[i]).checked) {
+        pixelType = (<HTMLSelectElement>pixelTypeInputs[i]).value;
+        break;
+      }
+    }
+
+    console.log(pixelType);
+    let type = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
+    if (pixelType === '0') {
+      type = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_BW;
+    }
+    else if (pixelType === '1') {
+      type = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY;
+    }
+
+    let config : DeviceConfiguration = {
+      PixelType: type,
+    };
+    this.dwtObject.acquireImage(this.devices![this.selectSources!.selectedIndex], config);
   }
 
   downloadDocument() {

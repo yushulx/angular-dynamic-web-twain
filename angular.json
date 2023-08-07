@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-scanner-camera-capture": {
+    "angular-dynamic-web-twain": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-scanner-camera-capture",
+            "outputPath": "dist/angular-dynamic-web-twain",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-scanner-camera-capture:build:production"
+              "browserTarget": "angular-dynamic-web-twain:build:production"
             },
             "development": {
-              "browserTarget": "angular-scanner-camera-capture:build:development"
+              "browserTarget": "angular-dynamic-web-twain:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-scanner-camera-capture:build"
+            "browserTarget": "angular-dynamic-web-twain:build"
           }
         },
         "test": {

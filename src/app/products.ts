@@ -15,5 +15,10 @@ export const products = [
     name: 'Image Editor',
     description: 'Image editing: rotate, mirror, flip and more',
   },
+  {
+    id: 'remote-scan',
+    name: 'Remote Scan',
+    description: 'Scan documents without installing Dynamsoft service',
+  },
 ];
 

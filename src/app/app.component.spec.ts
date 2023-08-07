@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-scanner-camera-capture'`, () => {
+  it(`should have as title 'angular-dynamic-web-twain'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-scanner-camera-capture');
+    expect(app.title).toEqual('angular-dynamic-web-twain');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-scanner-camera-capture app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-dynamic-web-twain app is running!');
   });
 });

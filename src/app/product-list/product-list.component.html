@@ -12,6 +12,11 @@
           {{ product.name }}
         </a>
       </ng-template>
+      <ng-template [ngIf]="product.id === 'remote-scan'">
+        <a [title]="product.name + ' details'" [routerLink]="['/remote-scan']">>
+          {{ product.name }}
+        </a>
+      </ng-template>
     </div>
   </h3>
 

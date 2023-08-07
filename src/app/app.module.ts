@@ -9,6 +9,7 @@ import { AcquireImageComponent } from './acquire-image/acquire-image.component';
 
 import { DynamicWebTWAINService } from './dynamic-web-twain.service';
 import { ImageEditorComponent } from './image-editor/image-editor.component';
+import { RemoteScanComponent } from './remote-scan/remote-scan.component';
 console.log('run module');
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ console.log('run module');
     TopBarComponent,
     AcquireImageComponent,
     ImageEditorComponent,
+    RemoteScanComponent,
   ],
   imports: [
     BrowserModule,

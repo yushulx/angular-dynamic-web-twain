@@ -28,7 +28,6 @@ export class RemoteScanComponent implements OnInit {
     const selectElement = event.target as HTMLSelectElement;
     const selectedOptionValue = selectElement.value;
 
-    console.log('Selected Value:', selectedOptionValue);
     let index = this.serviceOptions.findIndex(x => x.value === selectedOptionValue);
     this.findSources(this.services![index]);
   }
@@ -54,11 +53,8 @@ export class RemoteScanComponent implements OnInit {
     this.container = document.getElementById("dwtcontrolContainer") as HTMLElement;
     this.container.style.width = 600 + "px";
     this.container.style.height = 600 + "px";
-    console.log('container:', this.container);
     let ret = this.dwtObject.Viewer.bind(this.container);
-    console.log('binding result:', ret);
     ret = this.dwtObject.Viewer.show();
-    console.log('show result:', ret);
 
     this.services = await this.dwtObject.getDynamsoftService();
     if (this.services) {
@@ -116,7 +112,6 @@ export class RemoteScanComponent implements OnInit {
       }
     }
 
-    console.log(pixelType);
     let type = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
     if (pixelType === '0') {
       type = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_BW;

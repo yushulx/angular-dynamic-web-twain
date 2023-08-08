@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { WebTwain } from 'dwt/dist/types/WebTwain';
 import Dynamsoft from 'dwt';
 import { RemoteScanObject } from 'dwt/dist/types/RemoteScan';
-import { ServiceInfo, Device } from 'dwt/dist/types/WebTwain.Acquire';
+import { ServiceInfo, Device, DeviceConfiguration } from 'dwt/dist/types/WebTwain.Acquire';
 import { DynamicWebTWAINService } from '../dynamic-web-twain.service';
-import { DeviceConfiguration } from 'dwt/dist/types/WebTwain.Acquire';
 
 @Component({
   selector: 'app-remote-scan',

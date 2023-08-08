@@ -1,6 +1,8 @@
 # Angular Dynamic Web TWAIN
 An Angular project demonstrating how to use [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain/overview/) APIs.
 
+https://github.com/yushulx/angular-dynamic-web-twain/assets/2202306/5a74b9d1-c26f-41da-9156-6fbccb615f87
+
 ## Development Environment
 
 ```bash
